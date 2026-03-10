@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:  #07163a;
+        }
+
+        .pill{
+            width: 220px;
+            height: 360px;
+            border-radius: 120px;
+            position: relative;
+            background: linear-gradient(to bottom,#6a0080,#c40044,#ff7b2f,#ffcc66);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        .sun{
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg,orange,yellow);
+            border: .5px solid white;
+            box-shadow: 0px 0px 10px 5px yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 1s ease;
+        }
+        .moon{
+            width: 70px;
+            height: 70px;
+            background:white;
+            border-radius: 50%;
+            border: .5px solid white ;
+            box-shadow: 0px 0px 15px 5px white;
+            position: absolute;
+            opacity: 0;
+            transform: translatey(250px);
+            transition:transform 1s ease ,opacity 1s ease;
+           
+           
+        }
+        .pill:hover{
+            background: linear-gradient(180deg,rgb(8, 8, 66),rgb(7, 7, 136),blue);
+            .moon{
+                transform: translateY(90px);
+                opacity: 1;
+
+
+            }
+            .sun{
+                opacity: 0;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="pill">
+        <div class="sun"></div>
+        <div class="moon"></div>
+    </div>
+</body>
+</html>
