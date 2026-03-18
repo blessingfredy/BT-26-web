@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "image content";
+            
+            gap: 10px;
+            padding: 20px;
+        }
+        .header{
+            grid-area: header;
+            background: red;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .image{
+            grid-area: image;
+            background: lightblue;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .content{
+            grid-area: content;
+            background: lightpink;
+            padding: 20px;
+        }
+        @media(max-width:800px){
+            .container{grid-template-areas: 
+                "header"
+                "image"
+                "content";
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="image">Image</div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, voluptates temporibus. </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, voluptates temporibus. </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, voluptates temporibus. </p>
+        </div>
+    </div>
+</body>
+</html>

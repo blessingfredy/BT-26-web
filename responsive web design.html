@@ -28,7 +28,16 @@
         .Box-5{grid-area: footer1;}
         .Box-6{grid-area: footer2;}   
         
-        @media
+        @media(max-width:500px){
+        .container{grid-template-areas:
+            "header"
+            "main1"
+            "main2"
+            "main3"
+            "footer1"
+            "footer2"
+        ;}
+    }
         </style>
 </head>
 <body>
